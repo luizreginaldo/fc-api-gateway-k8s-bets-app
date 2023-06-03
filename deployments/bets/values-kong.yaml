@@ -57,8 +57,10 @@ ingress:
         - path: /api/bets
           pathType: Prefix
           backend:
-            serviceName: bets
-            servicePort: 9999
+            service:
+                name: bets
+                port:
+                  number: 9999
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
